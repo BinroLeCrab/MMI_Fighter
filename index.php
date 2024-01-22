@@ -1,5 +1,5 @@
 <?php
-require_once 'Personnage.php';
+require_once 'init.php';
 session_start();
 ?>
 
@@ -8,7 +8,7 @@ session_start();
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <title>MMI FIGHT</title>
+        <title>MMI FIGHTER</title>
         <link rel="stylesheet" type="text/css" href="style/style.css"/>
         <script type="text/javascript" src="js/script.js"></script>
     </head>
@@ -17,10 +17,15 @@ session_start();
     if (!isset($_SESSION['perso1']) && !isset($_SESSION['perso2'])) {
     if (!isset($_POST['perso1']) && !isset($_POST['perso2'])) {
         require_once 'choixPerso.php';
+        // echo"b";
     } else {
-        $_SESSION['perso1'] = new Personnage($_POST['perso1'], 100, 500);
+
+        echo "a";
+        $_SESSION['perso1'] = $MonManager->getObject($_POST['perso1']);
     
-        $_SESSION['perso2'] = new Personnage($_POST['perso2'], 0, 1000);
+        $_SESSION['perso2'] = $MonManager->getObject($_POST['perso2']);
+
+        var_dump($_SESSION);
 
         header('location:index.php');
     }

@@ -2,15 +2,25 @@
 
 class Personnage {
 
+    private $id;
     private $name;
+    private $cri;
     private $atk;
     private $pv;
     private $pv_max;
 
-    //? -------------------------FUNCTION-------------------------------
+    //? -------------------------GETTERS-------------------------------
+
+    public function getId() {
+        return $this->id;
+    }
 
     public function getName() {
         return $this->name;
+    }
+
+    public function getCri() {
+        return $this->cri;
     }
 
     public function getAtk() {
@@ -21,8 +31,18 @@ class Personnage {
         return $this->pv;
     }
 
+    //? -------------------------SETTERS-------------------------------
+
+    public function setId($id) {
+        $this->id = $id;
+    }
+
     public function setName($name) {
         $this->name = $name;
+    }
+
+    public function setCri($cri) {
+        $this->cri = $cri;
     }
 
     public function setAtk($atk) {
@@ -49,15 +69,22 @@ class Personnage {
         }
     }
 
-    function __construct($name, $atk, $pv) {
-        $this->setName($name);
-        $this->setAtk($atk);
-        $this->setPv($pv);
-        $this->setPvMax($pv);
+    private function hydrate(array $donnees) {
+        foreach ($donnees as $key => $value) { 
+            $method = 'set'.ucfirst($key); 
+            if (method_exists($this, $method)) { 
+                $this->$method($value); 
+            } 
+        }
+    }
+
+    public function __construct($data) {
+        $this->hydrate($data);
+        $this->setPvMax($data['pv']);
     }
 
     public function crier() {
-        return "Vous ne passerez pas !<br>";
+        return $this->getCri()."<br>";
     } 
 
     public function regenerer(int $x=NULL) {
@@ -74,6 +101,20 @@ class Personnage {
         } else {
             return false;
         }
+    }
+
+    public function selectAff ($cote) {
+        $reponse = "<div>\n";
+        
+        if ($cote == 1) {
+            $reponse.= "  <input type=\"radio\" id=\"".$this->getName().$cote."\" name=\"perso1\" value=\"".$this->getId()."\" />\n";
+        } else {
+            $reponse.= "  <input type=\"radio\" id=\"".$this->getName().$cote."\" name=\"perso2\" value=\"".$this->getId()."\" />\n";
+        }
+        $reponse.= "  <label for=\"".$this->getName().$cote."\">".$this->getName()."</label>\n";
+        $reponse.= "</div>\n";
+
+        return $reponse;
     }
 
     public function attaque (Personnage $perso_cible) {
