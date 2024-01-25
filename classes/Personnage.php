@@ -86,6 +86,12 @@ class Personnage {
     public function crier() {
         return $this->getCri()."<br>";
     } 
+    
+    public function combatAff() {
+        $reponse = "<div class=\"PvBar\" style=\"--Pv: ".($this->pv/$this->pv_max*100)."%\"></div>\n";
+        $reponse .= "<p>".$this->name." attaque de ".$this->atk.", ".$this->pv." PV</p>\n";
+        return $reponse;
+    }
 
     public function regenerer(int $x=NULL) {
         if (is_null($x)) {
@@ -127,7 +133,7 @@ class Personnage {
         if ($perso_cible->is_alive()) {
             $reponse .= "PV restants : " . $perso_cible->pv . "<br>";
         } else {
-            $reponse .= $perso_cible->name . " est mort !<br>";
+            header('location:index.php');
         }
         return $reponse;
     }
