@@ -27,9 +27,14 @@ body {
     height: 100vh;
     width: 100vw;
     font-family: 'GamePaused', sans-serif;
-    background: url(../asset/IUT_site_de_champs.png);
+    /* background: url(../asset/IUT_site_de_champs.png); */
     background-size: cover;
     background-position: center;
+    padding: 20px;
+}
+
+body > h1 {
+    margin: 0px;
 }
 
 body > pre {
@@ -81,4 +86,30 @@ body > pre {
 
 .BtnSoi {
     background: url(../asset/Texture4.svg) center;
+}
+
+
+.PvBar {
+    display: block;
+    height: 30px;
+    width: 500px;
+    background-color: #C1BDA1;
+    border-radius: 0px 2px 20px 0px;
+    border-width: var(--Border);
+    border-style: solid;
+    border-color: var(--Gris-sombre);
+    outline-width: var(--Border);
+    outline-color: var(--Blanc-casse);
+    outline-style: solid;
+    overflow: hidden;
+}
+
+.PvBar::after {
+    display: block;
+    content: "";
+    height: 100%;
+    width: var(--Pv);
+    background: url(../asset/Texture3.svg) center;
+    margin: 0px;
+    text-align: left;
 }
