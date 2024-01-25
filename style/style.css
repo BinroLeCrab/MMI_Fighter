@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'GamePaused';
+	font-weight: 400;
+    font-style: normal;
+	src: url('../font/GamePaused-Regular.woff2') format('woff2'),
+        url('../font/GamePaused-Regular.woff') format('woff');
+}
+
+:root {
+    --Blanc-casse: #FFF9D7;
+    --Gris-sombre: #292929;
+    --Jaune: #FFC42E;
+
+    --Radius-Int: 2px;
+    --Radius-ext: 4px:
+    --Border : 3px;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'GamePaused', sans-serif;
+    background: url(../asset/IUT_site_de_champs.png);
+    background-size: cover;
+    background-position: center;
+}
+
+body > pre {
+    margin: 0px;
+    width: 100%;
+}
+
+.btn_Action {
+    display: block;
+    padding: 10px 30px;
+    border-radius: var(--Radius-Int);
+    margin: 10px;
+    font-size: 1.563rem;
+    color: var(--Blanc-casse);
+    border-width: var(--Border);
+    border-style: solid;
+    border-color: var(--Gris-sombre);
+    width: fit-content;
+    background: url(../asset/Texture1.svg) center;
+    text-decoration: none;
+    /* -webkit-text-stroke: 1px var(--Gris-sombre); */
+    text-shadow: -1px -1px 0 var(--Gris-sombre), 1px -1px 0 var(--Gris-sombre), -1px 1px 0 var(--Gris-sombre), 1px 1px 0 var(--Gris-sombre);
+    outline-width: var(--Border);
+    outline-color: var(--Blanc-casse);
+    outline-style: solid;
+    width: 186px;
+    text-align: center;
+}
+
+
+.btn_Action:hover {
+    color: var(--Jaune);
+    outline-color: var(--Jaune);
+}
+
+.BtnAtk {
+    background: url(../asset/Texture1.svg) center;
+}
+
+.BtnCap1 {
+    background: url(../asset/Texture2.svg) center;
+}
+
+
+.BtnCap2 {
+    background: url(../asset/Texture3.svg) center;
+}
+
+
+.BtnSoi {
+    background: url(../asset/Texture4.svg) center;
+}

@@ -49,7 +49,10 @@ session_start();
     
     
     
-    echo "<a href='index.php?atk'>Attaquer</a>\n";
+    echo "<a href='index.php?atk' class=\"btn_Action BtnAtk\">Attaquer</a>\n";
+    echo "<a href='index.php?atk' class=\"btn_Action BtnCap1\">Capacité 1</a>\n";
+    echo "<a href='index.php?atk' class=\"btn_Action BtnCap2\">Capacité 2</a>\n";
+    echo "<a href='index.php?atk' class=\"btn_Action BtnSoi\">Soin</a>\n";
     echo "<a href='index.php?restart'>Recommencer</a>\n";
     
     
