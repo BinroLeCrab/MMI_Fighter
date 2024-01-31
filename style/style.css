@@ -10,10 +10,17 @@
     --Blanc-casse: #FFF9D7;
     --Gris-sombre: #292929;
     --Jaune: #FFC42E;
+    --Red: #FE2A49;
+    --Blue: #3B64A3;
 
     --Radius-Int: 2px;
-    --Radius-ext: 4px:
-    --Border : 3px;
+    --Radius-ext: 4px;
+    --Border-Int: 3px solid var(--Gris-sombre);
+    --Border-Out: 3px solid var(--Blanc-casse);
+    --Border-Out-Selected: 6px solid var(--Jaune);
+
+    --h4: 1.25rem;
+    --micro: 0.813rem;
 }
 
 *,
@@ -42,24 +49,129 @@ body > pre {
     width: 100%;
 }
 
+
+
+/*? --- Formulaire Séléction  */
+
+.ChoixPerso > div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    gap: 20px;
+}
+
+.ChoixPerso > div > h2 {
+    width: 100%;
+}
+
+
+/*? --- Carte Séléction  */
+
+.SelectCards > input {
+    display: none;
+}
+
+.SelectCards > label {
+    display: grid;
+    border-radius: var(--Radius-ext);
+    width: fit-content;
+    border: var(--Border-Int);
+    outline: var(--Border-Out);
+    font-size: var(--h4) ;
+    color: var(--Blanc-casse);
+    text-shadow: var(--Gris-sombre) 2px 0px 0px, var(--Gris-sombre) 1.75517px 0.958851px 0px, var(--Gris-sombre) 1.0806px 1.68294px 0px, var(--Gris-sombre) 0.141474px 1.99499px 0px, var(--Gris-sombre) -0.832294px 1.81859px 0px, var(--Gris-sombre) -1.60229px 1.19694px 0px, var(--Gris-sombre) -1.97998px 0.28224px 0px, var(--Gris-sombre) -1.87291px -0.701566px 0px, var(--Gris-sombre) -1.30729px -1.5136px 0px, var(--Gris-sombre) -0.421592px -1.95506px 0px, var(--Gris-sombre) 0.567324px -1.91785px 0px, var(--Gris-sombre) 1.41734px -1.41108px 0px, var(--Gris-sombre) 1.92034px -0.558831px 0px;
+    overflow: hidden;
+}
+
+.SelectCards input:checked ~ label {
+    outline: var(--Border-Out-Selected);
+}
+
+.SelectCards > label:hover {
+    color: var(--Jaune);
+    outline-color: var(--Jaune);
+}
+
+.SelectCards .Stats {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    padding: 3px;
+    flex-direction: column;
+    background: var(--URL) center;
+    background-size: cover;
+}
+
+.nbStats {
+    display: flex;
+    width: fit-content;
+    gap: 3px;
+    font-size: var(--micro);
+    align-items: center;
+    height: fit-content;
+}
+
+.nbStats > p {
+    margin: 0px;
+}
+
+.nbStats > img {
+    height: 14px;
+    width: 14px;
+}
+
+.SelectCards label > p {
+    margin: 0px;
+    padding: 3px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.Sj1 > label > p {
+    background: url(../asset/Texture1.svg) center;
+}
+
+.Sj1 input:checked ~ label {
+    outline-color: var(--Red);
+}
+
+.Sj2 > label > p {
+    background: url(../asset/Texture2.svg) center;
+}
+
+.Sj2 input:checked ~ label {
+    outline-color: var(--Blue);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .btn_Action {
     display: block;
     padding: 10px 30px;
-    border-radius: var(--Radius-Int);
+    border-radius: var(--Radius-ext);
     margin: 10px;
-    font-size: 1.563rem;
-    color: var(--Blanc-casse);
-    border-width: var(--Border);
-    border-style: solid;
-    border-color: var(--Gris-sombre);
+    border: var(--Border-Int);
+    outline: var(--Border-Out);
     width: fit-content;
     background: url(../asset/Texture1.svg) center;
     text-decoration: none;
-    /* -webkit-text-stroke: 1px var(--Gris-sombre); */
-    text-shadow: -1px -1px 0 var(--Gris-sombre), 1px -1px 0 var(--Gris-sombre), -1px 1px 0 var(--Gris-sombre), 1px 1px 0 var(--Gris-sombre);
-    outline-width: var(--Border);
-    outline-color: var(--Blanc-casse);
-    outline-style: solid;
+
+    font-size: 1.563rem;
+    font-family: 'GamePaused', sans-serif;
+    color: var(--Blanc-casse);
+    text-shadow: var(--Gris-sombre) 2px 0px 0px, var(--Gris-sombre) 1.75517px 0.958851px 0px, var(--Gris-sombre) 1.0806px 1.68294px 0px, var(--Gris-sombre) 0.141474px 1.99499px 0px, var(--Gris-sombre) -0.832294px 1.81859px 0px, var(--Gris-sombre) -1.60229px 1.19694px 0px, var(--Gris-sombre) -1.97998px 0.28224px 0px, var(--Gris-sombre) -1.87291px -0.701566px 0px, var(--Gris-sombre) -1.30729px -1.5136px 0px, var(--Gris-sombre) -0.421592px -1.95506px 0px, var(--Gris-sombre) 0.567324px -1.91785px 0px, var(--Gris-sombre) 1.41734px -1.41108px 0px, var(--Gris-sombre) 1.92034px -0.558831px 0px;
+    
     width: 186px;
     text-align: center;
 }
@@ -68,6 +180,16 @@ body > pre {
 .btn_Action:hover {
     color: var(--Jaune);
     outline-color: var(--Jaune);
+}
+
+.btn_Action:disabled {
+    outline: none;
+    opacity: 0.5;
+}
+
+.btn_Action:disabled:hover {
+    color : var(--Blanc-casse);
+    outline-color: none;
 }
 
 .BtnAtk {
@@ -94,13 +216,9 @@ body > pre {
     height: 30px;
     width: 500px;
     background-color: #C1BDA1;
-    border-radius: 0px 2px 20px 0px;
-    border-width: var(--Border);
-    border-style: solid;
-    border-color: var(--Gris-sombre);
-    outline-width: var(--Border);
-    outline-color: var(--Blanc-casse);
-    outline-style: solid;
+    border-radius: 0px 4px 20px 0px;
+    border: var(--Border-Int);
+    outline: var(--Border-Out);
     overflow: hidden;
 }
 

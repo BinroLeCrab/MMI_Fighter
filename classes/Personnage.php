@@ -9,6 +9,8 @@ class Personnage {
     private $pv;
     private $pv_max;
 
+    private $S1;
+
     //? -------------------------GETTERS-------------------------------
 
     public function getId() {
@@ -29,6 +31,10 @@ class Personnage {
 
     public function getPv() {
         return $this->pv;
+    }
+
+    public function getS1() {
+        return $this->S1;
     }
 
     //? -------------------------SETTERS-------------------------------
@@ -67,6 +73,10 @@ class Personnage {
         } else {
             $this->pv_max = 0;
         }
+    }
+
+    public function setS1($S1) {
+        $this->S1 = $S1;
     }
 
     private function hydrate(array $donnees) {
@@ -110,14 +120,35 @@ class Personnage {
     }
 
     public function selectAff ($cote) {
-        $reponse = "<div>\n";
+        $reponse = "<div style=\"--URL: url(../asset/perso/".$this->getS1().");\" class=\"SelectCards Sj".$cote."\">\n";
         
         if ($cote == 1) {
             $reponse.= "  <input type=\"radio\" id=\"".$this->getName().$cote."\" name=\"perso1\" value=\"".$this->getId()."\" />\n";
         } else {
             $reponse.= "  <input type=\"radio\" id=\"".$this->getName().$cote."\" name=\"perso2\" value=\"".$this->getId()."\" />\n";
         }
-        $reponse.= "  <label for=\"".$this->getName().$cote."\">".$this->getName()."</label>\n";
+
+        // $reponse.= "  <label for=\"".$this->getName().$cote."\">".$this->getName()."</label>\n";
+
+        $reponse.= "  <label for=\"".$this->getName().$cote."\">\n";
+
+        $reponse.= "      <div class=\"Stats\">\n";
+
+        $reponse.= "          <div class=\"nbStats\">\n";
+        $reponse.= "              <p>".$this->getPv()."</p>\n";
+        $reponse.= "              <img src=\"asset/PV.svg\" alt=\"PV\">\n";
+        $reponse.= "          </div>\n";
+        $reponse.= "          <div class=\"nbStats\">\n";
+        $reponse.= "              <p>".$this->getAtk()."</p>\n";
+        $reponse.= "              <img src=\"asset/ATK.svg\" alt=\"Attaque\">\n";
+        $reponse.= "          </div>\n";
+
+        $reponse.= "      </div>\n";
+
+        $reponse.="       <p>".$this->getName()."</p>\n";
+
+        $reponse.="   </label>\n";
+
         $reponse.= "</div>\n";
 
         return $reponse;

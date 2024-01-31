@@ -5,7 +5,7 @@ $persos = $MonManager->getList();
 ?>
 
 <h1>Choisissez vos personnages</h1>
-<form action='index.php' method='post'>
+<form class="ChoixPerso" action='index.php' method='post'>
     <div>
         <h2>Personnage 1</h2>
 
