@@ -2,8 +2,6 @@
 
 $persos = $MonManager->getList();
 
-// var_dump($persos);
-
 ?>
 
 <h1>Choisissez vos personnages</h1>
@@ -25,3 +23,11 @@ $persos = $MonManager->getList();
     </div>
     <input type="submit" value="FIGHT !"/>
 </form>
+
+<!-- 
+     _____     _____
+    |  _  |   |  _  |
+   -| | | |---| | | |-
+    |_____| 7 |_____|  ~B!nro~
+    
+-->
