@@ -120,13 +120,9 @@ class Personnage {
     }
 
     public function selectAff ($cote) {
-        $reponse = "<div style=\"--URL: url(../asset/perso/".$this->getS1().");\" class=\"SelectCards Sj".$cote."\">\n";
+        $reponse = "<div style=\"--URL: url(../asset/perso/".$this->getS1().");\" class=\"SelectCards Sj".$cote." js_Persoj".$cote."\"\">\n";
         
-        if ($cote == 1) {
-            $reponse.= "  <input type=\"radio\" id=\"".$this->getName().$cote."\" name=\"perso1\" value=\"".$this->getId()."\" />\n";
-        } else {
-            $reponse.= "  <input type=\"radio\" id=\"".$this->getName().$cote."\" name=\"perso2\" value=\"".$this->getId()."\" />\n";
-        }
+        $reponse.= "  <input type=\"radio\" id=\"".$this->getName().$cote."\" name=\"perso".$cote."\" value=\"".$this->getId()."\" />\n";
 
         // $reponse.= "  <label for=\"".$this->getName().$cote."\">".$this->getName()."</label>\n";
 
@@ -145,7 +141,7 @@ class Personnage {
 
         $reponse.= "      </div>\n";
 
-        $reponse.="       <p>".$this->getName()."</p>\n";
+        $reponse.="       <p class=\"js_NamePers\">".$this->getName()."</p>\n";
 
         $reponse.="   </label>\n";
 

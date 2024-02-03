@@ -21,10 +21,12 @@ $persos = $MonManager->getAllPersonnage();
         }
         ?>
     </div>
-    <input type="submit" value="FIGHT !"/>
+    <input type="submit" class="js_Start" value="FIGHT !" disabled/>
 
     <a href='index.php?Admin'>Liste des personnages</a>
 </form>
+
+<script type="text/javascript" src="js/perso_select.js"></script>
 
 <!-- 
      _____     _____

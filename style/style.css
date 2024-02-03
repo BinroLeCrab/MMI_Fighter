@@ -73,6 +73,7 @@ body > pre {
 
 .SelectCards > label {
     display: grid;
+    cursor: pointer;
     border-radius: var(--Radius-ext);
     width: fit-content;
     border: var(--Border-Int);
@@ -144,6 +145,18 @@ body > pre {
     outline-color: var(--Blue);
 }
 
+
+
+.Sj1 input:disabled ~ label, .Sj2 input:disabled ~ label {
+    outline: none;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.Sj1 input:disabled:hover ~ label, .Sj2 input:disabled:hover ~ label {
+    color : var(--Blanc-casse);
+    outline-color: none;
+}
 
 
 
