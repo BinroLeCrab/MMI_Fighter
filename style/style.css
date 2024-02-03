@@ -231,3 +231,22 @@ body > pre {
     margin: 0px;
     text-align: left;
 }
+
+
+
+/*? --- Tableau Admin */
+
+.Admin .Tabl_Sprite {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.Admin table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.Admin table th, .Admin table td {
+    border : 1px solid var(--Gris-sombre);
+}
