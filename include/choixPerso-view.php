@@ -1,6 +1,6 @@
 <?php
 
-$persos = $MonManager->getList();
+$persos = $MonManager->getAllPersonnage();
 
 ?>
 
@@ -22,6 +22,8 @@ $persos = $MonManager->getList();
         ?>
     </div>
     <input type="submit" value="FIGHT !"/>
+
+    <a href='index.php?Admin'>Liste des personnages</a>
 </form>
 
 <!-- 
