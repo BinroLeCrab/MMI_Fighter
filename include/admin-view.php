@@ -22,10 +22,15 @@ $persos = $MonManager->getAllPersonnage();
         <tr>
             <?php if (isset($_GET['Mod_perso']) && $_GET['Mod_perso'] == $perso->getId()) { ?>
 
-            <form action='index.php?Admin&Modify' method='post'>
+            <form action='index.php?Admin&Modify' enctype="multipart/form-data" method='post'>
                 <input type="hidden" name="id" value="<?= $perso->getId() ?>" />
+                <input type="hidden" name="S1_Initial" value="<?= $perso->getS1() ?>" />
                 <td><?= $perso->getId() ?></td>
-                <td><img class="Tabl_Sprite" src="asset/perso/<?= $perso->getS1() ?>" alt=""/></td>
+                <!-- <td><img class="Tabl_Sprite" src="asset/perso/<?= $perso->getS1() ?>" alt=""/></td> -->
+                <td>
+                    <img class="Tabl_Sprite" src="asset/perso/<?= $perso->getS1() ?>" alt=""/>
+                    <input type="file" name="S1" value="<?= $perso->getS1() ?>"/>
+                </td>
                 <td><input type="text" name="name" value="<?= $perso->getName() ?>" required /></td>
                 <td><input type="text" name="cri" value="<?= $perso->getCri() ?>" required /></td>
                 <td><input type="number" name="atk" value="<?= $perso->getAtk() ?>" required /></td>
@@ -50,12 +55,12 @@ $persos = $MonManager->getAllPersonnage();
 
     <?php if (isset($_GET['Add_perso'])) { ?>
 
-        <form action='index.php?Admin&Add' method='post'>
+        <form action='index.php?Admin&Add' enctype="multipart/form-data" method='post'>
             <input type="text" name="name" placeholder="Nom" required />
             <input type="text" name="cri" placeholder="Cri" required />
             <input type="number" name="atk" placeholder="Attaque" required />
             <input type="number" name="pv" placeholder="PV" required />
-            <!-- <input type="file" name="S1" required /> -->
+            <input type="file" name="S1" required />
             <input type="submit" name="add_perso" value="Ajouter" />
         </form>
     <?php } else { ?>

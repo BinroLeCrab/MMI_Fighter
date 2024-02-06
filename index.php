@@ -16,18 +16,28 @@ session_start();
 <?php
 if (isset($_GET['Admin'])){
 
-    if (isset($_GET['Add']) && isset($_POST['name']) && isset($_POST['cri']) && isset($_POST['atk']) && isset($_POST['pv'])) {
+    if (isset($_GET['Add']) && isset($_POST['name']) && isset($_POST['cri']) && isset($_POST['atk']) && isset($_POST['pv']) && isset($_FILES['S1'])) {
+
+        $nomS1 = $data['name'].'_'.str_replace(' ', '_', $_FILES['S1']['name']);
 
         $data = [
             'name' => $_POST['name'],
             'cri' => $_POST['cri'],
             'atk' => $_POST['atk'],
-            'pv' => $_POST['pv']
+            'pv' => $_POST['pv'],
+            'S1' => $nomS1
         ];
 
         $New_Perso = new Personnage($data);
+
+        var_dump($New_Perso);
         
         if ($MonManager->addPersonnage($New_Perso)){
+
+            $nom = $_FILES['S1']['tmp_name'];
+            $destination = './asset/perso/'.$nomS1;
+            move_uploaded_file($nom, $destination);
+
             header('location:index.php?Admin');
         } else {
             echo "Erreur lors de l'ajout du personnage.";
@@ -50,11 +60,34 @@ if (isset($_GET['Admin'])){
             'pv' => $_POST['pv']
         ];
 
+        if (isset($_FILES['S1']) && $_FILES['S1']['error'] != UPLOAD_ERR_NO_FILE) {
+            echo "S1 existe";
+            $nomS1 = $data['name'].'_'.str_replace(' ', '_', $_FILES['S1']['name']);
+            $data['S1'] = $nomS1;
+
+            // Supprimer l'ancienne image si elle existe
+            $oldImage = './asset/perso/'.$_POST['S1_Initial'];
+            if (file_exists($oldImage)) {
+                unlink($oldImage);
+            }
+
+            $nom = $_FILES['S1']['tmp_name'];
+            $destination = './asset/perso/'.$nomS1;
+            move_uploaded_file($nom, $destination);
+        } else {
+            echo "S1 n'existe pas";
+            $data['S1'] = $_POST['S1_Initial'];
+            echo "S1 : " . $_FILES['S1']['name'];
+        }
+
         $Modify_Perso = new Personnage($data);
-        
+
         if ($MonManager->modifyPersonnage($Modify_Perso)){
+            var_dump($Modify_Perso);
             header('location:index.php?Admin');
         } else {
+            var_dump($Modify_Perso);
+            echo $MonManager->modifyPersonnage($Modify_Perso);
             echo "Erreur lors de la modification du personnage.";
         }
 

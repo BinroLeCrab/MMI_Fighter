@@ -12,12 +12,13 @@ class PersonnageManager {
     }
 
     public function addPersonnage(Personnage $perso) :bool {
-        $stmt = $this->db->prepare('INSERT INTO personnages(name, cri, atk, pv) VALUES(:n, :c, :a, :p)');
+        $stmt = $this->db->prepare('INSERT INTO personnages(name, cri, atk, pv, S1) VALUES(:n, :c, :a, :p, :s1)');
         
         $stmt->bindValue(':n', $perso->getName());
         $stmt->bindValue(':c', $perso->getCri());
         $stmt->bindValue(':a', $perso->getAtk());
         $stmt->bindValue(':p', $perso->getPv());
+        $stmt->bindValue(':s1', $perso->getS1());
 
         $stmt->execute();
         
@@ -34,16 +35,19 @@ class PersonnageManager {
     }
 
     public function modifyPersonnage(Personnage $perso) :bool {
-        $stmt = $this->db->prepare('UPDATE personnages SET name = :n, cri = :c, atk = :a, pv = :p WHERE id = :id');
+
+        $stmt = $this->db->prepare('UPDATE personnages SET name = :n, cri = :c, atk = :a, pv = :p, S1 = :s1 WHERE id = :id');
+
         $stmt->bindValue(':n', $perso->getName());
         $stmt->bindValue(':c', $perso->getCri());
         $stmt->bindValue(':a', $perso->getAtk());
         $stmt->bindValue(':p', $perso->getPv());
+        $stmt->bindValue(':s1', $perso->getS1());
         $stmt->bindValue(':id', $perso->getId());
 
-        $stmt->execute();
+        return $stmt->execute();
 
-        return $stmt->rowCount();
+        // return $stmt->rowCount();
     }
 
     public function getAllPersonnage() :array {
