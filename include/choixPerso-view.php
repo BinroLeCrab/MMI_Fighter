@@ -6,7 +6,7 @@ $persos = $MonManager->getAllPersonnage();
 
 <h1>Choisissez vos personnages</h1>
 <form class="ChoixPerso" action='index.php' method='post'>
-    <div class="GrillePerso">
+    <div class="GrillePerso GPj1">
         <h2>Personnage 1</h2>
 
         <?php foreach ($persos as $perso) {
@@ -14,7 +14,7 @@ $persos = $MonManager->getAllPersonnage();
         }
         ?>
     </div>
-    <div class="GrillePerso">
+    <div class="GrillePerso GPj2">
         <h2>Personnage 2</h2>
         <?php foreach ($persos as $perso) {
             echo $perso->selectAff("2");

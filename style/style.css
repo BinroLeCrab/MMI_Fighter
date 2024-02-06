@@ -53,14 +53,43 @@ body > pre {
 
 /*? --- Formulaire Séléction  */
 
-.ChoixPerso > div {
+.ChoixPerso {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, fit-content(100%));
+    width: 100%;
+    gap: 20px;
+
+    grid-template-areas: 
+        "j1 j2"
+        "f f"
+        "l l";
+}
+
+.ChoixPerso > .Start_Btn {
+    grid-area: f;
+}
+
+.ChoixPerso > .GrillePerso {
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    width: 100%;
     gap: 20px;
 }
 
-.ChoixPerso > div > h2 {
+.ChoixPerso > .GPj1 {
+    grid-area: j1;
+}
+
+.ChoixPerso > .GPj2 {
+    grid-area: j2;
+}
+
+.ChoixPerso > .Lien {
+    grid-area: l;
+}
+
+.GrillePerso > h2 {
     width: 100%;
 }
 
