@@ -17,6 +17,10 @@ function ActiveBouton() {
     }
 }
 
+function changeInfoJ(objetNom, name, Sprite, src) {
+    objetNom.textContent = name;
+    Sprite.src = src;
+}
 
 //? ------------------------------------------------------------------
 
@@ -24,6 +28,10 @@ function ActiveBouton() {
 
 const checkboxesj1 = document.querySelectorAll('.js_Persoj1');
 const checkboxesj2 = document.querySelectorAll('.js_Persoj2');
+const NamePersoJ1 = document.querySelector('.js_NomPersoJ1');
+const ImgPersoJ1 = document.querySelector('.js_ImgPersoJ1');
+const NamePersoJ2 = document.querySelector('.js_NomPersoJ2');
+const ImgPersoJ2 = document.querySelector('.js_ImgPersoJ2');
 const checkboxes = {
     j1 : checkboxesj1, 
     j2 : checkboxesj2
@@ -45,7 +53,9 @@ for (let i = 0; i < checkboxes['j1'].length; i++) {
             j1_selected = perso.querySelector('.js_NamePers').textContent;
             console.log("j1 : "+ j1_selected);
             DesactivePerso(j1_selected, 'j2');
+            changeInfoJ(NamePersoJ1, j1_selected, ImgPersoJ1, perso.querySelector('.js_ImgPers').src);
             ActiveBouton();
+            
         }
     });
 }
@@ -59,6 +69,7 @@ for (let i = 0; i < checkboxes['j2'].length; i++) {
             j2_selected = perso.querySelector('.js_NamePers').textContent;
             console.log("j2 : "+ j2_selected);
             DesactivePerso(j2_selected, 'j1');
+            changeInfoJ(NamePersoJ2, j2_selected, ImgPersoJ2, perso.querySelector('.js_ImgPers').src);
             ActiveBouton();
         }
     });

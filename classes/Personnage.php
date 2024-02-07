@@ -126,7 +126,7 @@ class Personnage {
 
         // $reponse.= "  <label for=\"".$this->getName().$cote."\">".$this->getName()."</label>\n";
 
-        $reponse.= "  <label for=\"".$this->getName().$cote."\">\n";
+        $reponse.= "  <label class=\"Text_Border\" for=\"".$this->getName().$cote."\">\n";
 
         $reponse.= "      <div class=\"Stats\">\n";
 
@@ -142,6 +142,8 @@ class Personnage {
         $reponse.= "      </div>\n";
 
         $reponse.="       <p class=\"js_NamePers\">".$this->getName()."</p>\n";
+
+        $reponse.="       <img src=\"./asset/perso/".$this->getS1()."\" class=\"js_ImgPers Sprite\" alt=\"\">\n";
 
         $reponse.="   </label>\n";
 
