@@ -99,10 +99,19 @@ if (isset($_GET['Admin'])){
     
 } else if (!isset($_SESSION['perso1']) && !isset($_SESSION['perso2'])) {
     
-    if (!isset($_POST['perso1']) && !isset($_POST['perso2'])) {
+    if (isset($_SESSION['enter']) && !isset($_POST['perso1']) && !isset($_POST['perso2'])) {
 
         require_once 'include/choixPerso-view.php';
 
+    } else if (isset($_GET['enter']) && !isset($_POST['perso1']) && !isset($_POST['perso2'])) {
+
+        $_SESSION['enter'] = true;
+        header('location:index.php');
+
+    } else if (!isset($_POST['perso1']) && !isset($_POST['perso2'])){
+
+        require_once 'include/acceuil-view.php';
+        
     } else {
 
         $_SESSION['perso1'] = $MonManager->getOnePersonnageById($_POST['perso1']);
