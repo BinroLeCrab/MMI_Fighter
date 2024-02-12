@@ -39,17 +39,17 @@ if ($_SESSION['tour'] % 2 == 0) {
     <p>tour perso 1</p>
 
     <form action='index.php' method='post'>
-        <input type="submit" class="btn_Action BtnAtk" name="Pers1_act" value="Attaquer" />
-        <input type="submit" class="btn_Action BtnCap1" name="Pers1_act" value="Capacité 1" />
-        <input type="submit" class="btn_Action BtnCap2" name="Pers1_act" value="Capacité 2" />
-        <input type="submit" class="btn_Action BtnSoi" name="Pers1_act" value="Soin" />
+        <input type="submit" class="BTN btn_Action BtnAtk" name="Pers1_act" value="Attaquer" />
+        <input type="submit" class="BTN btn_Action BtnCap1" name="Pers1_act" value="Capacité 1" />
+        <input type="submit" class="BTN btn_Action BtnCap2" name="Pers1_act" value="Capacité 2" />
+        <input type="submit" class="BTN btn_Action BtnSoi" name="Pers1_act" value="Soin" />
     </form>
 
     <form action='index.php' method='post'>
-        <input type="submit" class="btn_Action BtnAtk" name="Pers2_act" value="Attaquer" disabled />
-        <input type="submit" class="btn_Action BtnCap1" name="Pers2_act" value="Capacité 1" disabled />
-        <input type="submit" class="btn_Action BtnCap2" name="Pers2_act" value="Capacité 2" disabled />
-        <input type="submit" class="btn_Action BtnSoi" name="Pers2_act" value="Soin" disabled />
+        <input type="submit" class="BTN btn_Action BtnAtk" name="Pers2_act" value="Attaquer" disabled />
+        <input type="submit" class="BTN btn_Action BtnCap1" name="Pers2_act" value="Capacité 1" disabled />
+        <input type="submit" class="BTN btn_Action BtnCap2" name="Pers2_act" value="Capacité 2" disabled />
+        <input type="submit" class="BTN btn_Action BtnSoi" name="Pers2_act" value="Soin" disabled />
     </form>
 
 <?php
@@ -62,17 +62,17 @@ if ($_SESSION['tour'] % 2 == 0) {
     <p>tour perso 2</p>
 
     <form action='index.php' method='post'>
-        <input type="submit" class="btn_Action BtnAtk" name="Pers1_act" value="Attaquer" disabled />
-        <input type="submit" class="btn_Action BtnCap1" name="Pers1_act" value="Capacité 1" disabled />
-        <input type="submit" class="btn_Action BtnCap2" name="Pers1_act" value="Capacité 2" disabled />
-        <input type="submit" class="btn_Action BtnSoi" name="Pers1_act" value="Soin" disabled />
+        <input type="submit" class="BTN btn_Action BtnAtk" name="Pers1_act" value="Attaquer" disabled />
+        <input type="submit" class="BTN btn_Action BtnCap1" name="Pers1_act" value="Capacité 1" disabled />
+        <input type="submit" class="BTN btn_Action BtnCap2" name="Pers1_act" value="Capacité 2" disabled />
+        <input type="submit" class="BTN btn_Action BtnSoi" name="Pers1_act" value="Soin" disabled />
     </form>
 
     <form action='index.php' method='post'>
-        <input type="submit" class="btn_Action BtnAtk" name="Pers2_act" value="Attaquer" />
-        <input type="submit" class="btn_Action BtnCap1" name="Pers2_act" value="Capacité 1" />
-        <input type="submit" class="btn_Action BtnCap2" name="Pers2_act" value="Capacité 2" />
-        <input type="submit" class="btn_Action BtnSoi" name="Pers2_act" value="Soin" />
+        <input type="submit" class="BTN btn_Action BtnAtk" name="Pers2_act" value="Attaquer" />
+        <input type="submit" class="BTN btn_Action BtnCap1" name="Pers2_act" value="Capacité 1" />
+        <input type="submit" class="BTN btn_Action BtnCap2" name="Pers2_act" value="Capacité 2" />
+        <input type="submit" class="BTN btn_Action BtnSoi" name="Pers2_act" value="Soin" />
     </form>
 
 <?php

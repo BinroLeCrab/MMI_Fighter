@@ -4,9 +4,9 @@ $persos = $MonManager->getAllPersonnage();
 
 ?>
 
-<section class="Admin">
+<main class="Admin">
 
-    <a href='index.php'>Retour à l'accueil.</a>
+    <a href="index.php" class="Lien">Retour à l'accueil.</a>
 
     <table>
         <tr>
@@ -66,4 +66,4 @@ $persos = $MonManager->getAllPersonnage();
     <?php } else { ?>
         <a href='index.php?Admin&Add_perso'>Ajouter un personnage</a>
     <?php } ?>
-</section>
+</main>

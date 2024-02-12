@@ -17,9 +17,15 @@ function ActiveBouton() {
     }
 }
 
-function changeInfoJ(objetNom, name, Sprite, src) {
+function changeInfoJ(objetNom, name, Sprite, src, objetStats, stats) {
     objetNom.textContent = name;
     Sprite.src = src;
+
+    console.log(stats);
+    console.log(stats.querySelector('.js_PV'));
+
+    objetStats.querySelector('.js_PV').textContent = stats.querySelector('.js_PV').textContent;
+    objetStats.querySelector('.js_Atk').textContent = stats.querySelector('.js_ATK').textContent;
 }
 
 //? ------------------------------------------------------------------
@@ -28,10 +34,16 @@ function changeInfoJ(objetNom, name, Sprite, src) {
 
 const checkboxesj1 = document.querySelectorAll('.js_Persoj1');
 const checkboxesj2 = document.querySelectorAll('.js_Persoj2');
+
 const NamePersoJ1 = document.querySelector('.js_NomPersoJ1');
 const ImgPersoJ1 = document.querySelector('.js_ImgPersoJ1');
+
 const NamePersoJ2 = document.querySelector('.js_NomPersoJ2');
 const ImgPersoJ2 = document.querySelector('.js_ImgPersoJ2');
+
+const StatsPersoJ1 = document.querySelector('.js_StatsPersoJ1');
+const StatsPersoJ2 = document.querySelector('.js_StatsPersoJ2');
+
 const checkboxes = {
     j1 : checkboxesj1, 
     j2 : checkboxesj2
@@ -53,7 +65,7 @@ for (let i = 0; i < checkboxes['j1'].length; i++) {
             j1_selected = perso.querySelector('.js_NamePers').textContent;
             console.log("j1 : "+ j1_selected);
             DesactivePerso(j1_selected, 'j2');
-            changeInfoJ(NamePersoJ1, j1_selected, ImgPersoJ1, perso.querySelector('.js_ImgPers').src);
+            changeInfoJ(NamePersoJ1, j1_selected, ImgPersoJ1, perso.querySelector('.js_ImgPers').src, StatsPersoJ1, perso.querySelector('.js_Stats'));
             ActiveBouton();
             
         }
@@ -69,7 +81,7 @@ for (let i = 0; i < checkboxes['j2'].length; i++) {
             j2_selected = perso.querySelector('.js_NamePers').textContent;
             console.log("j2 : "+ j2_selected);
             DesactivePerso(j2_selected, 'j1');
-            changeInfoJ(NamePersoJ2, j2_selected, ImgPersoJ2, perso.querySelector('.js_ImgPers').src);
+            changeInfoJ(NamePersoJ2, j2_selected, ImgPersoJ2, perso.querySelector('.js_ImgPers').src, StatsPersoJ2, perso.querySelector('.js_Stats'));
             ActiveBouton();
         }
     });

@@ -128,14 +128,14 @@ class Personnage {
 
         $reponse.= "  <label class=\"Text_Border\" for=\"".$this->getName().$cote."\">\n";
 
-        $reponse.= "      <div class=\"Stats\">\n";
+        $reponse.= "      <div class=\"Stats js_Stats\">\n";
 
         $reponse.= "          <div class=\"nbStats\">\n";
-        $reponse.= "              <p>".$this->getPv()."</p>\n";
+        $reponse.= "              <p class=\"js_PV\">".$this->getPv()."</p>\n";
         $reponse.= "              <img src=\"asset/PV.svg\" alt=\"PV\">\n";
         $reponse.= "          </div>\n";
         $reponse.= "          <div class=\"nbStats\">\n";
-        $reponse.= "              <p>".$this->getAtk()."</p>\n";
+        $reponse.= "              <p class=\"js_ATK\">".$this->getAtk()."</p>\n";
         $reponse.= "              <img src=\"asset/ATK.svg\" alt=\"Attaque\">\n";
         $reponse.= "          </div>\n";
 
