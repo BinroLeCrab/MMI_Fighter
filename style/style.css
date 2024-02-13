@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'GamePaused';
-	font-weight: 400;
+    font-weight: 400;
     font-style: normal;
-	src: url('../font/GamePaused-Regular.woff2') format('woff2'),
+    src: url('../font/GamePaused-Regular.woff2') format('woff2'),
         url('../font/GamePaused-Regular.woff') format('woff');
 }
 
@@ -28,7 +28,7 @@
 
 *,
 *::before,
-*::after{
+*::after {
     box-sizing: border-box;
 }
 
@@ -42,11 +42,11 @@ body {
     background-position: center;
 }
 
-body > h1 {
+body>h1 {
     margin: 0px;
 }
 
-body > pre {
+body>pre {
     margin: 0px;
     width: 100%;
 }
@@ -72,6 +72,7 @@ body > pre {
 .BTN:hover {
     color: var(--Jaune);
     outline-color: var(--Jaune);
+    transform: scale(1.05);
 }
 
 .BTN:disabled {
@@ -81,8 +82,9 @@ body > pre {
 }
 
 .BTN:disabled:hover {
-    color : var(--Blanc-casse);
+    color: var(--Blanc-casse);
     outline-color: none;
+    transform: scale(1);
 }
 
 .Text_Border {
@@ -103,7 +105,7 @@ body > pre {
     gap: 20px;
 }
 
-.acceuil > h1 {
+.acceuil>h1 {
     display: none;
 }
 
@@ -122,7 +124,7 @@ body > pre {
     height: 100vh;
 }
 
-.PersoMain > h1 {
+.PersoMain>h1 {
     display: none;
 }
 
@@ -135,7 +137,7 @@ body > pre {
     grid-template-columns: 1fr 1fr;
     height: 100vh;
     width: 100vw;
-    
+
     align-items: center;
     justify-items: center;
 }
@@ -165,12 +167,13 @@ body > pre {
     width: 20px;
 }
 
-.Choix_Haut > .VS {
+.Choix_Haut>.VS {
     margin: auto 0px;
     text-shadow: var(--Violet) 8px 0px 0px, var(--Violet) 7.93758px 0.997398px 0px, var(--Violet) 7.7513px 1.97923px 0px, var(--Violet) 7.44406px 2.93018px 0px, var(--Violet) 7.02066px 3.8354px 0px, var(--Violet) 6.48771px 4.68078px 0px, var(--Violet) 5.85351px 5.45311px 0px, var(--Violet) 5.12797px 6.14035px 0px, var(--Violet) 4.32242px 6.73177px 0px, var(--Violet) 3.44941px 7.21814px 0px, var(--Violet) 2.52258px 7.59188px 0px, var(--Violet) 1.55638px 7.84714px 0px, var(--Violet) 0.565898px 7.97996px 0px, var(--Violet) -0.433417px 7.98825px 0px, var(--Violet) -1.42597px 7.87189px 0px, var(--Violet) -2.39627px 7.63269px 0px, var(--Violet) -3.32917px 7.27438px 0px, var(--Violet) -4.21013px 6.80256px 0px, var(--Violet) -5.02539px 6.22459px 0px, var(--Violet) -5.76223px 5.54948px 0px, var(--Violet) -6.40915px 4.78778px 0px, var(--Violet) -6.95606px 3.95136px 0px, var(--Violet) -7.39442px 3.05329px 0px, var(--Violet) -7.71739px 2.10757px 0px, var(--Violet) -7.91994px 1.12896px 0px, var(--Violet) -7.9989px 0.132735px 0px, var(--Violet) -7.95304px -0.865561px 0px, var(--Violet) -7.78307px -1.85035px 0px, var(--Violet) -7.49165px -2.80627px 0px, var(--Violet) -7.08333px -3.71839px 0px, var(--Violet) -6.56447px -4.57249px 0px, var(--Violet) -5.94318px -5.35524px 0px, var(--Violet) -5.22915px -6.05442px 0px, var(--Violet) -4.43352px -6.65912px 0px, var(--Violet) -3.5687px -7.15991px 0px, var(--Violet) -2.6482px -7.54898px 0px, var(--Violet) -1.68637px -7.82024px 0px, var(--Violet) -0.698222px -7.96947px 0px, var(--Violet) 0.300817px -7.99434px 0px, var(--Violet) 1.29516px -7.89446px 0px, var(--Violet) 2.2693px -7.67139px 0px, var(--Violet) 3.20802px -7.32862px 0px, var(--Violet) 4.09668px -6.87148px 0px, var(--Violet) 4.92142px -6.30711px 0px, var(--Violet) 5.66936px -5.64432px 0px, var(--Violet) 6.32883px -4.89346px 0px, var(--Violet) 6.88954px -4.06623px 0px, var(--Violet) 7.34274px -3.17555px 0px, var(--Violet) 7.68136px -2.23532px 0px, var(--Violet) 7.90012px -1.26021px 0px, var(--Violet) 7.9956px -0.265434px 0px;
 }
 
-.Choix_Haut h2, .Choix_Haut h3{
+.Choix_Haut h2,
+.Choix_Haut h3 {
     font-size: var(--BIG);
     color: var(--Blanc-casse);
 }
@@ -196,20 +199,23 @@ body > pre {
     padding: 0px 15px;
 }
 
-.sectionJ2 > .Bloc_Stat > * {
+.sectionJ2>.Bloc_Stat>* {
     margin-left: auto;
     flex-direction: row-reverse;
 }
 
-.Choix_Haut .sectionJ1 h2, .Choix_Haut .sectionJ1 h3 {
+.Choix_Haut .sectionJ1 h2,
+.Choix_Haut .sectionJ1 h3 {
     text-shadow: var(--Red) 8px 0px 0px, var(--Red) 7.93758px 0.997398px 0px, var(--Red) 7.7513px 1.97923px 0px, var(--Red) 7.44406px 2.93018px 0px, var(--Red) 7.02066px 3.8354px 0px, var(--Red) 6.48771px 4.68078px 0px, var(--Red) 5.85351px 5.45311px 0px, var(--Red) 5.12797px 6.14035px 0px, var(--Red) 4.32242px 6.73177px 0px, var(--Red) 3.44941px 7.21814px 0px, var(--Red) 2.52258px 7.59188px 0px, var(--Red) 1.55638px 7.84714px 0px, var(--Red) 0.565898px 7.97996px 0px, var(--Red) -0.433417px 7.98825px 0px, var(--Red) -1.42597px 7.87189px 0px, var(--Red) -2.39627px 7.63269px 0px, var(--Red) -3.32917px 7.27438px 0px, var(--Red) -4.21013px 6.80256px 0px, var(--Red) -5.02539px 6.22459px 0px, var(--Red) -5.76223px 5.54948px 0px, var(--Red) -6.40915px 4.78778px 0px, var(--Red) -6.95606px 3.95136px 0px, var(--Red) -7.39442px 3.05329px 0px, var(--Red) -7.71739px 2.10757px 0px, var(--Red) -7.91994px 1.12896px 0px, var(--Red) -7.9989px 0.132735px 0px, var(--Red) -7.95304px -0.865561px 0px, var(--Red) -7.78307px -1.85035px 0px, var(--Red) -7.49165px -2.80627px 0px, var(--Red) -7.08333px -3.71839px 0px, var(--Red) -6.56447px -4.57249px 0px, var(--Red) -5.94318px -5.35524px 0px, var(--Red) -5.22915px -6.05442px 0px, var(--Red) -4.43352px -6.65912px 0px, var(--Red) -3.5687px -7.15991px 0px, var(--Red) -2.6482px -7.54898px 0px, var(--Red) -1.68637px -7.82024px 0px, var(--Red) -0.698222px -7.96947px 0px, var(--Red) 0.300817px -7.99434px 0px, var(--Red) 1.29516px -7.89446px 0px, var(--Red) 2.2693px -7.67139px 0px, var(--Red) 3.20802px -7.32862px 0px, var(--Red) 4.09668px -6.87148px 0px, var(--Red) 4.92142px -6.30711px 0px, var(--Red) 5.66936px -5.64432px 0px, var(--Red) 6.32883px -4.89346px 0px, var(--Red) 6.88954px -4.06623px 0px, var(--Red) 7.34274px -3.17555px 0px, var(--Red) 7.68136px -2.23532px 0px, var(--Red) 7.90012px -1.26021px 0px, var(--Red) 7.9956px -0.265434px 0px;
 }
 
-.Choix_Haut .sectionJ2 h2, .Choix_Haut .sectionJ2 h3 {
+.Choix_Haut .sectionJ2 h2,
+.Choix_Haut .sectionJ2 h3 {
     text-shadow: var(--Blue) 8px 0px 0px, var(--Blue) 7.93758px 0.997398px 0px, var(--Blue) 7.7513px 1.97923px 0px, var(--Blue) 7.44406px 2.93018px 0px, var(--Blue) 7.02066px 3.8354px 0px, var(--Blue) 6.48771px 4.68078px 0px, var(--Blue) 5.85351px 5.45311px 0px, var(--Blue) 5.12797px 6.14035px 0px, var(--Blue) 4.32242px 6.73177px 0px, var(--Blue) 3.44941px 7.21814px 0px, var(--Blue) 2.52258px 7.59188px 0px, var(--Blue) 1.55638px 7.84714px 0px, var(--Blue) 0.565898px 7.97996px 0px, var(--Blue) -0.433417px 7.98825px 0px, var(--Blue) -1.42597px 7.87189px 0px, var(--Blue) -2.39627px 7.63269px 0px, var(--Blue) -3.32917px 7.27438px 0px, var(--Blue) -4.21013px 6.80256px 0px, var(--Blue) -5.02539px 6.22459px 0px, var(--Blue) -5.76223px 5.54948px 0px, var(--Blue) -6.40915px 4.78778px 0px, var(--Blue) -6.95606px 3.95136px 0px, var(--Blue) -7.39442px 3.05329px 0px, var(--Blue) -7.71739px 2.10757px 0px, var(--Blue) -7.91994px 1.12896px 0px, var(--Blue) -7.9989px 0.132735px 0px, var(--Blue) -7.95304px -0.865561px 0px, var(--Blue) -7.78307px -1.85035px 0px, var(--Blue) -7.49165px -2.80627px 0px, var(--Blue) -7.08333px -3.71839px 0px, var(--Blue) -6.56447px -4.57249px 0px, var(--Blue) -5.94318px -5.35524px 0px, var(--Blue) -5.22915px -6.05442px 0px, var(--Blue) -4.43352px -6.65912px 0px, var(--Blue) -3.5687px -7.15991px 0px, var(--Blue) -2.6482px -7.54898px 0px, var(--Blue) -1.68637px -7.82024px 0px, var(--Blue) -0.698222px -7.96947px 0px, var(--Blue) 0.300817px -7.99434px 0px, var(--Blue) 1.29516px -7.89446px 0px, var(--Blue) 2.2693px -7.67139px 0px, var(--Blue) 3.20802px -7.32862px 0px, var(--Blue) 4.09668px -6.87148px 0px, var(--Blue) 4.92142px -6.30711px 0px, var(--Blue) 5.66936px -5.64432px 0px, var(--Blue) 6.32883px -4.89346px 0px, var(--Blue) 6.88954px -4.06623px 0px, var(--Blue) 7.34274px -3.17555px 0px, var(--Blue) 7.68136px -2.23532px 0px, var(--Blue) 7.90012px -1.26021px 0px, var(--Blue) 7.9956px -0.265434px 0px;
 }
 
-.Choix_Haut .sectionJ1, .Choix_Haut .sectionJ2 {
+.Choix_Haut .sectionJ1,
+.Choix_Haut .sectionJ2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -222,15 +228,15 @@ body > pre {
     align-items: end;
 }
 
-.Bloc_Nom_Cit > h3 {
+.Bloc_Nom_Cit>h3 {
     text-wrap: nowrap;
 }
 
-.sectionJ1 > .Bloc_Nom_Cit {
+.sectionJ1>.Bloc_Nom_Cit {
     text-align: left;
 }
 
-.sectionJ2 > .Bloc_Nom_Cit {
+.sectionJ2>.Bloc_Nom_Cit {
     text-align: right;
     flex-direction: row-reverse;
 }
@@ -242,7 +248,7 @@ body > pre {
     padding: 20px;
 }
 
-.Lien  {
+.Lien {
     color: var(--Blanc-casse);
 }
 
@@ -254,43 +260,43 @@ body > pre {
     width: 100%;
     gap: 20px;
 
-    grid-template-areas: 
+    grid-template-areas:
         "j1 j2"
         "f f";
 }
 
-.ChoixPerso > .Start_Btn {
+.ChoixPerso>.Start_Btn {
     grid-area: f;
 }
 
-.ChoixPerso > .GrillePerso {
+.ChoixPerso>.GrillePerso {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     gap: 20px;
 }
 
-.ChoixPerso > .GPj1 {
+.ChoixPerso>.GPj1 {
     grid-area: j1;
 }
 
-.ChoixPerso > .GPj2 {
+.ChoixPerso>.GPj2 {
     grid-area: j2;
     justify-content: flex-end;
 }
 
-.GrillePerso > h2 {
+.GrillePerso>h2 {
     width: 100%;
 }
 
 
 /*? --- Carte Séléction  */
 
-.SelectCards > input {
+.SelectCards>input {
     display: none;
 }
 
-.SelectCards > label {
+.SelectCards>label {
     display: grid;
     cursor: pointer;
     border-radius: var(--Radius-ext);
@@ -301,17 +307,18 @@ body > pre {
     overflow: hidden;
 }
 
-.SelectCards > label > .Sprite {
+.SelectCards>label>.Sprite {
     display: none;
 }
 
-.SelectCards input:checked ~ label {
+.SelectCards input:checked~label {
     outline: var(--Border-Out-Selected);
 }
 
-.SelectCards > label:hover {
+.SelectCards>label:hover {
     color: var(--Jaune);
     outline-color: var(--Jaune);
+    transform: scale(1.05);
 }
 
 .SelectCards .Stats {
@@ -333,16 +340,16 @@ body > pre {
     height: fit-content;
 }
 
-.nbStats > p {
+.nbStats>p {
     margin: 0px;
 }
 
-.nbStats > img {
+.nbStats>img {
     height: 14px;
     width: 14px;
 }
 
-.SelectCards label > p {
+.SelectCards label>p {
     margin: 0px;
     padding: 3px;
     height: 100%;
@@ -350,44 +357,93 @@ body > pre {
     text-align: center;
 }
 
-.Sj1 > label > p {
+.Sj1>label>p {
     background: url(../asset/Texture1.svg) center;
 }
 
-.Sj1 input:checked ~ label {
+.Sj1 input:checked~label {
     outline-color: var(--Red);
 }
 
-.Sj2 > label > p {
+.Sj2>label>p {
     background: url(../asset/Texture2.svg) center;
 }
 
-.Sj2 input:checked ~ label {
+.Sj2 input:checked~label {
     outline-color: var(--Blue);
 }
 
 
 
-.Sj1 input:disabled ~ label, .Sj2 input:disabled ~ label {
+.Sj1 input:disabled~label,
+.Sj2 input:disabled~label {
     outline: none;
     cursor: not-allowed;
     opacity: 0.5;
 }
 
-.Sj1 input:disabled:hover ~ label, .Sj2 input:disabled:hover ~ label {
-    color : var(--Blanc-casse);
+.Sj1 input:disabled:hover~label,
+.Sj2 input:disabled:hover~label {
+    color: var(--Blanc-casse);
     outline-color: none;
 }
 
+.sectionJ1--NotSelect .Bloc_Stat,
+.sectionJ1--NotSelect .Bloc_Nom_Cit,
+.sectionJ2--NotSelect .Bloc_Stat,
+.sectionJ2--NotSelect .Bloc_Nom_Cit,
+.spriteJ1--NotSelect,
+.spriteJ2--NotSelect {
+    opacity: 0;
+}
 
 
+/*? --- Vue Combat  */
 
+.Combat_main {
+    display: grid;
+    grid-template-rows: 1fr fit-content(100%);
 
+    height: 100vh;
+    /* width: 100vw; */
+}
 
+.Combat_SectAct {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "j1 i j2";
+    justify-items: center;
 
+    background: var(--Gris-Faible-Opa);
+    backdrop-filter: blur(4px);
+    text-align: center;
+    padding: 20px;
+}
 
+.Combat_SectAct form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: fit-content;
+}
 
+.Action {
+    grid-area: i;
+    height: 100%;
+    overflow-y: scroll;
+    width: 100%;
+    height: 150px;
+    color: var(--Blanc-casse);
 
+}
+
+.Form_Action_j1 {
+    grid-area: j1;
+}
+
+.Form_Action_j2 {
+    grid-area: j2;
+}
 
 
 .btn_Action {
@@ -405,7 +461,7 @@ body > pre {
     font-family: 'GamePaused', sans-serif;
     color: var(--Blanc-casse);
     text-shadow: var(--Gris-sombre) 2px 0px 0px, var(--Gris-sombre) 1.75517px 0.958851px 0px, var(--Gris-sombre) 1.0806px 1.68294px 0px, var(--Gris-sombre) 0.141474px 1.99499px 0px, var(--Gris-sombre) -0.832294px 1.81859px 0px, var(--Gris-sombre) -1.60229px 1.19694px 0px, var(--Gris-sombre) -1.97998px 0.28224px 0px, var(--Gris-sombre) -1.87291px -0.701566px 0px, var(--Gris-sombre) -1.30729px -1.5136px 0px, var(--Gris-sombre) -0.421592px -1.95506px 0px, var(--Gris-sombre) 0.567324px -1.91785px 0px, var(--Gris-sombre) 1.41734px -1.41108px 0px, var(--Gris-sombre) 1.92034px -0.558831px 0px;
-    
+
     width: 186px;
     text-align: center;
 }
@@ -476,6 +532,7 @@ body > pre {
     background-color: var(--Blanc-casse);
 }
 
-.Admin table th, .Admin table td {
-    border : 1px solid var(--Gris-sombre);
+.Admin table th,
+.Admin table td {
+    border: 1px solid var(--Gris-sombre);
 }

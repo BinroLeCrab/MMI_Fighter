@@ -7,11 +7,11 @@ $persos = $MonManager->getAllPersonnage();
 <main class="PersoMain">
     <h1>Choisissez vos personnages</h1>
     <section class="Choix_Back">
-        <img class="js_ImgPersoJ1" src="" alt="" />
-        <img class="js_ImgPersoJ2" src="" alt="" />
+        <img class="js_ImgPersoJ1 spriteJ1--NotSelect" src="" alt="" />
+        <img class="js_ImgPersoJ2 spriteJ2--NotSelect" src="" alt="" />
     </section>
     <section class="Choix_Haut">
-        <div class="sectionJ1">
+        <div class="sectionJ1 sectionJ1--NotSelect">
             <h2>J1</h2>
             <div class="js_StatsPersoJ1 Text_Border Bloc_Stat">
                 <div class="nbStats">
@@ -29,7 +29,7 @@ $persos = $MonManager->getAllPersonnage();
             </div>
         </div>
         <h2 class="VS">VS</h2>
-        <div class="sectionJ2">
+        <div class="sectionJ2 sectionJ2--NotSelect">
             <h2>J2</h2>
             <div class="js_StatsPersoJ2 Text_Border Bloc_Stat">
                 <div class="nbStats">

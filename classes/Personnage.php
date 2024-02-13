@@ -157,7 +157,7 @@ class Personnage {
 
         $reponse = "<hr>";
 
-        $reponse .= $this->name . " attaque " . $perso_cible->name . " ! Dégats : " . $this->atk . "<br>";
+        $reponse .= "<p>" . $this->name . " attaque " . $perso_cible->name . " ! Dégats : " . $this->atk . "</p>\n";
 
         if ($perso_cible->is_alive()) {
             $reponse .= "PV restants : " . $perso_cible->pv . "<br>";

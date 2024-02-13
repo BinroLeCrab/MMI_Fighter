@@ -10,6 +10,17 @@ function DesactivePerso(perso, j) {
     }
 }
 
+function AffInfoPerso(j) {
+
+    if (j == 'j1') {
+        document.querySelector('.sectionJ1--NotSelect').classList.remove('sectionJ1--NotSelect');
+        document.querySelector('.spriteJ1--NotSelect').classList.remove('spriteJ1--NotSelect');
+    } else {
+        document.querySelector('.sectionJ2--NotSelect').classList.remove('sectionJ2--NotSelect');
+        document.querySelector('.spriteJ2--NotSelect').classList.remove('spriteJ2--NotSelect');
+    }
+}
+
 function ActiveBouton() {
     // si les deux joueurs ont choisi leurs persos, active le bouton de validation
     if (j1_selected != '' && j2_selected != '') {
@@ -66,6 +77,7 @@ for (let i = 0; i < checkboxes['j1'].length; i++) {
             console.log("j1 : "+ j1_selected);
             DesactivePerso(j1_selected, 'j2');
             changeInfoJ(NamePersoJ1, j1_selected, ImgPersoJ1, perso.querySelector('.js_ImgPers').src, StatsPersoJ1, perso.querySelector('.js_Stats'));
+            AffInfoPerso("j1");
             ActiveBouton();
             
         }
@@ -82,6 +94,7 @@ for (let i = 0; i < checkboxes['j2'].length; i++) {
             console.log("j2 : "+ j2_selected);
             DesactivePerso(j2_selected, 'j1');
             changeInfoJ(NamePersoJ2, j2_selected, ImgPersoJ2, perso.querySelector('.js_ImgPers').src, StatsPersoJ2, perso.querySelector('.js_Stats'));
+            AffInfoPerso("j2");
             ActiveBouton();
         }
     });
