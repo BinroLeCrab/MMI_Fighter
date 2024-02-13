@@ -1,0 +1,1 @@
+document.querySelector('.js_action').scrollTop = document.querySelector('.js_action').scrollHeight;

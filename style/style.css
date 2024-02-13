@@ -408,6 +408,21 @@ body>pre {
     /* width: 100vw; */
 }
 
+.Combat__Header {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.Combat__Header :nth-child(1) {
+    text-align: right;
+}
+
+.Combat__Header :nth-child(1) .PvBar {
+    transform: scale(-1, 1);
+}
+
 .Combat_SectAct {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -434,7 +449,7 @@ body>pre {
     width: 100%;
     height: 150px;
     color: var(--Blanc-casse);
-
+    background-color: var(--Gris-Faible-Opa);
 }
 
 .Form_Action_j1 {

@@ -98,8 +98,10 @@ class Personnage {
     } 
     
     public function combatAff() {
-        $reponse = "<div class=\"PvBar\" style=\"--Pv: ".($this->pv/$this->pv_max*100)."%\"></div>\n";
-        $reponse .= "<p>".$this->name." attaque de ".$this->atk.", ".$this->pv." PV</p>\n";
+        $reponse = "<div class=\"CombatHeader__PVandINFO\">\n";
+        $reponse .= "   <div class=\"PvBar\" style=\"--Pv: ".($this->pv/$this->pv_max*100)."%\"></div>\n";
+        $reponse .= "   <p>".$this->name." attaque de ".$this->atk.", ".$this->pv." PV</p>\n";
+        $reponse .= "</div>\n";
         return $reponse;
     }
 
