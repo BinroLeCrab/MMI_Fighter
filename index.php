@@ -139,6 +139,8 @@ if (isset($_GET['Admin'])){
         //? --- Affichage Fin Combat 
 
         require_once 'include/finCombat-view.php';
+        echo "<a href='index.php?restart'>Recommencer</a>\n";   
+
 
     } else {
 
@@ -147,7 +149,6 @@ if (isset($_GET['Admin'])){
         require_once 'include/combat-view.php';
     }
     
-    echo "<a href='index.php?restart'>Recommencer</a>\n";   
     
     // $_SESSION['perso2']->regenerer(30);
 }

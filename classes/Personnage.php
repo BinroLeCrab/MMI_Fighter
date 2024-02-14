@@ -98,10 +98,27 @@ class Personnage {
     } 
     
     public function combatAff() {
-        $reponse = "<div class=\"CombatHeader__PVandINFO\">\n";
+        $reponse = "<div class=\"Text_Border CombatHeader__PVandINFO\">\n";
+
         $reponse .= "   <div class=\"PvBar\" style=\"--Pv: ".($this->pv/$this->pv_max*100)."%\"></div>\n";
-        $reponse .= "   <p>".$this->name." attaque de ".$this->atk.", ".$this->pv." PV</p>\n";
+
+        $reponse .= "   <div class=\"Bloc_Stat\">\n";
+        $reponse .= "       <div class=\"nbStats\">\n";
+        $reponse .= "           <p>".$this->getAtk()."</p>\n";
+        $reponse .= "           <img class=\"IconHaut\" src=\"asset/ATK.svg\" alt=\"ATK\">\n";
+        $reponse .= "       </div>\n";
+        $reponse .= "       <div class=\"nbStats\">\n";
+        $reponse .= "           <p>".$this->getPv()."</p>\n";
+        $reponse .= "           <img class=\"IconHaut\" src=\"asset/PV.svg\" alt=\"PV\">\n";
+        $reponse .= "       </div>\n";
+        $reponse .= "   </div>\n";
+
+        $reponse .= "   <img class=\"CombatHeader__IMG\" src=\"asset/perso/".$this->getS1()."\" alt=\"\">\n";
+
+        $reponse .= "   <p class=\"CombatHeader__Name\">".$this->getName()."</p>\n";
+
         $reponse .= "</div>\n";
+
         return $reponse;
     }
 

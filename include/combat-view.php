@@ -18,6 +18,11 @@ if (isset($_POST['Pers1_act'])) {
 
 <main class="Combat_main">
 
+    <section class="SpriteBack">
+        <img class="js_ImgPersoJ1" src="asset/perso/<?= $_SESSION['perso1']->getS1() ?>" alt="" />
+        <img class="js_ImgPersoJ2" src="asset/perso/<?= $_SESSION['perso2']->getS1() ?>" alt="" />
+    </section>
+
 
     <div class="Combat__Header">
         <?= $_SESSION['perso1']->combatAff() ?>

@@ -6,7 +6,7 @@ $persos = $MonManager->getAllPersonnage();
 
 <main class="PersoMain">
     <h1>Choisissez vos personnages</h1>
-    <section class="Choix_Back">
+    <section class="SpriteBack">
         <img class="js_ImgPersoJ1 spriteJ1--NotSelect" src="" alt="" />
         <img class="js_ImgPersoJ2 spriteJ2--NotSelect" src="" alt="" />
     </section>
