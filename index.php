@@ -202,7 +202,6 @@ if (isset($_GET['Admin'])){
         //? --- Affichage Fin Combat 
 
         require_once 'include/finCombat-view.php';
-        echo "<a href='index.php?restart'>Recommencer</a>\n";   
 
 
     } else {

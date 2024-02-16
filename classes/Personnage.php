@@ -114,7 +114,7 @@ class Personnage {
     }
 
     public function crier() {
-        return $this->getCri()."<br>";
+        return $this->getCri();
     } 
     
     public function combatAff() {
