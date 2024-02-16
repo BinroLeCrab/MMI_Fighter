@@ -10,6 +10,8 @@ class Personnage {
     private $pv_max;
 
     private $S1;
+    private $S2;
+    private $S3;
 
     //? -------------------------GETTERS-------------------------------
 
@@ -35,6 +37,14 @@ class Personnage {
 
     public function getS1() {
         return $this->S1;
+    }
+
+    public function getS2() {
+        return $this->S2;
+    }
+
+    public function getS3() {
+        return $this->S3;
     }
 
     //? -------------------------SETTERS-------------------------------
@@ -78,6 +88,16 @@ class Personnage {
     public function setS1($S1) {
         $this->S1 = $S1;
     }
+
+    public function setS2($S2) {
+        $this->S2 = $S2;
+    }
+
+    public function setS3($S3) {
+        $this->S3 = $S3;
+    }
+
+    //? -------------------------METHODES-------------------------------
 
     private function hydrate(array $donnees) {
         foreach ($donnees as $key => $value) { 
@@ -162,7 +182,7 @@ class Personnage {
 
         $reponse.="       <p class=\"js_NamePers\">".$this->getName()."</p>\n";
 
-        $reponse.="       <img src=\"./asset/perso/".$this->getS1()."\" class=\"js_ImgPers Sprite\" alt=\"\">\n";
+        $reponse.="       <img src=\"./asset/perso/".$this->getS2()."\" class=\"js_ImgPers Sprite\" alt=\"\">\n";
 
         $reponse.="   </label>\n";
 

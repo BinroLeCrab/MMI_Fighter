@@ -144,9 +144,10 @@ body>pre {
 }
 
 .SpriteBack img {
-    aspect-ratio: 3/4;
+    /* aspect-ratio: 3/4; */
     height: 90vh;
     object-fit: cover;
+    margin-bottom: -8vh;
 }
 
 .SpriteBack :nth-child(2) {
