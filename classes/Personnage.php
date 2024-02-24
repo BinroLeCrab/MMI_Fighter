@@ -13,6 +13,8 @@ class Personnage {
     private $S2;
     private $S3;
 
+    private $soin = 50;
+
     //? -------------------------GETTERS-------------------------------
 
     public function getId() {
@@ -142,7 +144,7 @@ class Personnage {
         return $reponse;
     }
 
-    public function regenerer(int $x=NULL) {
+    private function regenerer(int $x=NULL) {
         if (is_null($x)) {
             $this->setPv($this->pv_max);
         } else {
@@ -206,6 +208,69 @@ class Personnage {
         return $reponse;
     }
 
+    public function capacite1 (Personnage $perso_cible) {
+
+        // var_dump($this);
+
+        $reponse = "<hr>";
+
+        $reponse .= "<p>" . $this->name . " passe son tour en essayant une features encore indisponnible...</p>\n";
+
+        if ($perso_cible->is_alive()) {
+            $reponse .= "<p>" . $perso_cible->getName() . " est surpris.</p>";
+        } else {
+            header('location:index.php');
+        }
+
+        return $reponse;
+    }
+
+    public function capacite2 (Personnage $perso_cible) {
+
+        // var_dump($this);
+
+        $reponse = "<hr>";
+
+        $reponse .= "<p>" . $this->name . " passe son tour en essayant une features encore indisponnible...</p>\n";
+
+        if ($perso_cible->is_alive()) {
+            $reponse .= "<p>" . $perso_cible->getName() . " est surpris.</p>";
+        } else {
+            header('location:index.php');
+        }
+
+        return $reponse;
+    }
+
+    public function soin () {
+
+        if ($this->pv == $this->pv_max) {
+            return "<hr><p>" . $this->name . " est déjà au maximum de ses PV !</p>\n";
+        } else if ($this->pv + $this->soin > $this->pv_max) {
+            $gain = $this->pv_max - $this->pv;
+
+            $this->regenerer();
+
+            $reponse = "<hr>";
+
+            $reponse .= "<p>" . $this->name . " se soigne de " . $gain . " PV !</p>\n";
+
+            $reponse .= "PV restants : " . $this->pv . "<br>";
+
+            return $reponse;
+        } else {
+            $this->regenerer($this->soin);
+
+            $reponse = "<hr>";
+
+            $reponse .= "<p>" . $this->name . " se soigne de " . $this->soin . " PV !</p>\n";
+
+            $reponse .= "PV restants : " . $this->pv . "<br>";
+
+            return $reponse;
+        }
+        
+    }
 }
 
 ?>
