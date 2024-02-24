@@ -23,7 +23,7 @@ if ($_SESSION['perso1']->is_alive() == false) {
 
     <h1 class="FinCombat__Titre">WINNER</h1>
 
-    <div class="FinCombat_Joueur">
+    <div class="FinCombat__JoueurContainer">
         <?php if ($GagnantJ == 1) { ?>
             <div class="FinCombat__Gagnant FinCombat--J1" style="--URL: url(../asset/perso/<?= $Gagnant->getS3() ?>)">
         <?php } else { ?>
@@ -31,36 +31,45 @@ if ($_SESSION['perso1']->is_alive() == false) {
         <?php } ?>
 
             <?php if ($GagnantJ == 1) { ?>
-                <h2 class="FinCombat__Joueur">J1</h2>
+                <h2 class="FinCombat__Joueur FinCombat__Joueur--Winner Shadow--J1">J1</h2>
             <?php } else { ?>
-                <h2 class="FinCombat__Joueur">J2</h2>
+                <h2 class="FinCombat__Joueur FinCombat__Joueur--Winner Shadow--J2">J2</h2>
             <?php } ?>
 
-            <p class="FinCombat__Cri">"<?= $Gagnant->getCri() ?>"</p>
+            <p class="FinCombat__Cri Text_Border">"<?= $Gagnant->getCri() ?>"</p>
 
-            <h3 class="FinCombat__Nom FinCombat__Nom--Winner"><?= $Gagnant->getName() ?></h3>
+            <h3 class="FinCombat__Nom FinCombat__Nom--Winner Shadow--J<?= $GagnantJ ?>"><?= $Gagnant->getName() ?></h3>
         </div>
 
-        <?php if ($GagnantJ == 1) { ?>
-            <div class="FinCombat__Perdant FinCombat--J2" style="--URL: url(../asset/perso/<?= $Perdant->getS3() ?>)">
-        <?php } else { ?>
-            <div class="FinCombat__Perdant FinCombat--J1" style="--URL: url(../asset/perso/<?= $Perdant->getS3() ?>)">
-        <?php } ?>
+        <div class="FinCombat__ContainerLoser">
+
+            <?php if ($GagnantJ == 1) { ?>
+                <div class="FinCombat__Perdant FinCombat--J2" style="--URL: url(../asset/perso/<?= $Perdant->getS3() ?>)">
+            <?php } else { ?>
+                <div class="FinCombat__Perdant FinCombat--J1" style="--URL: url(../asset/perso/<?= $Perdant->getS3() ?>)">
+            <?php } ?>
+                <img class="FinCombat__SpriteLoser" src="asset/perso/<?=$Perdant->getS1()?>" alt=""/>
+            
+            <?php if ($GagnantJ == 1) { ?>
+                <h3 class="FinCombat__Nom FinCombat__Nom--Loser FinCombat__Nom--LoserJ2 Text_Border"><?= $Perdant->getName() ?></h3>
+            <?php } else { ?>
+                <h3 class="FinCombat__Nom FinCombat__Nom--Loser FinCombat__Nom--LoserJ1 Text_Border"><?= $Perdant->getName() ?></h3>
+            <?php } ?>
+            
+            </div>
 
             <p class="FinCombat__KO">KO</p>
-        
+            
             <?php if ($GagnantJ == 1) { ?>
-                <h2 class="FinCombat__Joueur">J2</h2>
+                <h2 class="FinCombat__Joueur FinCombat__Joueur--Loser Shadow--J2">J2</h2>
             <?php } else { ?>
-                <h2 class="FinCombat__Joueur">J1</h2>
+                <h2 class="FinCombat__Joueur FinCombat__Joueur--Loser Shadow--J1">J1</h2>
             <?php } ?>
-
-            <h3 class="FinCombat__Nom FinCombat__Nom--Loser"><?= $Perdant->getName() ?></h3>
 
         </div>
     </div>
 
-    <a href='index.php?restart'>Recommencer</a>
+    <a href='index.php?restart' class="BTN Text_Border Start_Btn">Restart</a>
 
 </main>
 
