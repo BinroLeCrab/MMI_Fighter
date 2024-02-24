@@ -18,9 +18,9 @@ if (isset($_GET['Admin'])){
 
     if (isset($_GET['Add']) && isset($_POST['name']) && isset($_POST['cri']) && isset($_POST['atk']) && isset($_POST['pv']) && isset($_FILES['S1'])) {
 
-        $nomS1 = 'S1'.$data['name'].'_'.str_replace(' ', '_', $_FILES['S1']['name']);
-        $nomS2 = 'S2'.$data['name'].'_'.str_replace(' ', '_', $_FILES['S2']['name']);
-        $nomS3 = 'S3'.$data['name'].'_'.str_replace(' ', '_', $_FILES['S3']['name']);
+        $nomS1 = 'S1'.$_POST['name'].'_'.str_replace(' ', '_', $_FILES['S1']['name']);
+        $nomS2 = 'S2'.$_POST['name'].'_'.str_replace(' ', '_', $_FILES['S2']['name']);
+        $nomS3 = 'S3'.$_POST['name'].'_'.str_replace(' ', '_', $_FILES['S3']['name']);
 
         $data = [
             'name' => $_POST['name'],

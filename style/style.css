@@ -122,6 +122,8 @@ body>pre {
     padding: 10px 30px 5px;
     font-size: var(--BIG);
     background: url(../asset/Texture5.svg) center;
+    height: fit-content;
+    width: fit-content;
 }
 
 /*? --- Page Séléction de personnage  */
@@ -269,15 +271,14 @@ body>pre {
 
 .ChoixPerso {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, fit-content(100%));
+    grid-template-columns: 1fr fit-content(100%) 1fr;
     justify-items: center;
     width: 100%;
     gap: 20px;
 
     grid-template-areas:
-        "j1 j2"
-        "f f";
+        "j1 f j2";
+    align-items: end;
 }
 
 .ChoixPerso>.Start_Btn {
@@ -589,6 +590,31 @@ body>pre {
     background: url(../asset/Texture4.svg) center;
 }
 
+.Info__Container {
+    display: block;
+    height: 0px;
+}
+
+.btn_Action_Not {
+    position: relative;
+    display: none;
+    top: -87px;
+    left: -58px;
+    background: var(--Gris-Faible-Opa);
+    border-radius: var(--Radius-ext);
+    color: var(--Blanc-casse);
+    border: var(--Border-Int);
+    outline: var(--Border-Out);
+    z-index: 1;
+}
+
+.btn_Action_Not__Container .btn_Action:hover ~ .Info__Container .btn_Action_Not {
+    display: inline-block;
+}
+
+.btn_Action_Not__Container .btn_Action {
+    cursor: not-allowed;
+}
 
 .PvBar {
     display: block;

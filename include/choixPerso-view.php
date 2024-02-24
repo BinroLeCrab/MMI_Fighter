@@ -25,7 +25,7 @@ $persos = $MonManager->getAllPersonnage();
             </div>
             <div class="Text_Border Bloc_Nom_Cit">
                 <h3 class="js_NomPersoJ1">Personnage 1</h3>
-                <p>"Il a des penchant bizarre, mais on l'aime bien quand même !"</p>
+                <!-- <p>"Il a des penchant bizarre, mais on l'aime bien quand même !"</p> -->
             </div>
         </div>
         <h2 class="VS">VS</h2>
@@ -43,7 +43,7 @@ $persos = $MonManager->getAllPersonnage();
             </div>
             <div class="Text_Border Bloc_Nom_Cit">
                 <h3 class="js_NomPersoJ2">Personnage 2</h3>
-                <p>"Il a des penchant bizarre, mais on l'aime bien quand même !"</p>
+                <!-- <p>"Il a des penchant bizarre, mais on l'aime bien quand même !"</p> -->
             </div>
         </div>
     </section>
