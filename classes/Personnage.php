@@ -6,6 +6,7 @@ class Personnage {
     private $name;
     private $cri;
     private $atk;
+    private $mana;
     private $pv;
     private $pv_max;
 
@@ -13,7 +14,7 @@ class Personnage {
     private $S2;
     private $S3;
 
-    private $soin = 50;
+    private $soin;
 
     //? -------------------------GETTERS-------------------------------
 
@@ -31,6 +32,10 @@ class Personnage {
 
     public function getAtk() {
         return $this->atk;
+    }
+
+    public function getMana() {
+        return $this->mana;
     }
 
     public function getPv() {
@@ -68,6 +73,14 @@ class Personnage {
             $this->atk = $atk;
         } else {
             $this->atk = 0;
+        }
+    }
+
+    public function setMana($mana) {
+        if ($mana > 0) {
+            $this->mana = $mana;
+        } else {
+            $this->mana = 0;
         }
     }
 
@@ -113,6 +126,7 @@ class Personnage {
     public function __construct($data) {
         $this->hydrate($data);
         $this->setPvMax($data['pv']);
+        $this->soin = $this->mana;
     }
 
     public function crier() {
@@ -132,6 +146,10 @@ class Personnage {
         $reponse .= "       <div class=\"nbStats\">\n";
         $reponse .= "           <p>".$this->getPv()."</p>\n";
         $reponse .= "           <img class=\"IconHaut\" src=\"asset/PV.svg\" alt=\"PV\">\n";
+        $reponse .= "       </div>\n";
+        $reponse .= "       <div class=\"nbStats\">\n";
+        $reponse .= "           <p>".$this->getMana()."</p>\n";
+        $reponse .= "           <img class=\"IconHaut\" src=\"asset/Mana.svg\" alt=\"Mana\">\n";
         $reponse .= "       </div>\n";
         $reponse .= "   </div>\n";
 
@@ -178,6 +196,10 @@ class Personnage {
         $reponse.= "          <div class=\"nbStats\">\n";
         $reponse.= "              <p class=\"js_ATK\">".$this->getAtk()."</p>\n";
         $reponse.= "              <img src=\"asset/ATK.svg\" alt=\"Attaque\">\n";
+        $reponse.= "          </div>\n";
+        $reponse.= "          <div class=\"nbStats\">\n";
+        $reponse.= "              <p class=\"js_MANA\">".$this->getMana()."</p>\n";
+        $reponse.= "              <img src=\"asset/Mana.svg\" alt=\"Mana\">\n";
         $reponse.= "          </div>\n";
 
         $reponse.= "      </div>\n";

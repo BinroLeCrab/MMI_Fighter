@@ -16,6 +16,7 @@ $persos = $MonManager->getAllPersonnage();
             <th>Cri</th>
             <th>Attaque</th>
             <th>PV</th>
+            <th>Mana</th>
             <th>Sprite 2</th>
             <th>Sprite 3</th>
         </tr>
@@ -39,6 +40,7 @@ $persos = $MonManager->getAllPersonnage();
                 <td><input type="text" name="cri" value="<?= $perso->getCri() ?>" required /></td>
                 <td><input type="number" name="atk" value="<?= $perso->getAtk() ?>" required /></td>
                 <td><input type="number" name="pv" value="<?= $perso->getPv() ?>" required /></td>
+                <td><input type="number" name="mana" value="<?= $perso->getMana() ?>" required /></td>
                 <td>
                     <img class="Tabl_Sprite" src="asset/perso/<?= $perso->getS2() ?>" alt=""/>
                     <input type="file" name="S2" value="<?= $perso->getS2() ?>"/>
@@ -58,6 +60,7 @@ $persos = $MonManager->getAllPersonnage();
             <td><?= $perso->getCri() ?></td>
             <td><?= $perso->getAtk() ?></td>
             <td><?= $perso->getPv() ?></td>
+            <td><?= $perso->getMana() ?></td>
             <td><img class="Tabl_Sprite" src="asset/perso/<?= $perso->getS2() ?>" alt=""/></td>
             <td><img class="Tabl_Sprite" src="asset/perso/<?= $perso->getS3() ?>" alt=""/></td>
             <td><a href='index.php?Admin&Mod_perso=<?= $perso->getId() ?>'>Modifier</a> | <a href='index.php?Admin&Del_perso=<?= $perso->getId() ?>'>Supprimer</a></td>
@@ -74,6 +77,7 @@ $persos = $MonManager->getAllPersonnage();
             <input type="text" name="cri" placeholder="Cri" required />
             <input type="number" name="atk" placeholder="Attaque" required />
             <input type="number" name="pv" placeholder="PV" required />
+            <input type="number" name="mana" placeholder="Mana" required />
             <label for="S1">Sprite 1</label>
             <input type="file" name="S1" required />
             <label for="S2">Sprite 2</label>

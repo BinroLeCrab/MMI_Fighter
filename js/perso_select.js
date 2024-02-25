@@ -33,10 +33,11 @@ function changeInfoJ(objetNom, name, Sprite, src, objetStats, stats) {
     Sprite.src = src;
 
     console.log(stats);
-    console.log(stats.querySelector('.js_PV'));
+    console.log(stats.querySelector('.js_MANA'));
 
     objetStats.querySelector('.js_PV').textContent = stats.querySelector('.js_PV').textContent;
     objetStats.querySelector('.js_Atk').textContent = stats.querySelector('.js_ATK').textContent;
+    objetStats.querySelector('.js_Mana').textContent = stats.querySelector('.js_MANA').textContent;
 }
 
 //? ------------------------------------------------------------------

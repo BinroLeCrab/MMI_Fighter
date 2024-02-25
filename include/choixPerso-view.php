@@ -20,7 +20,11 @@ $persos = $MonManager->getAllPersonnage();
                 </div>
                 <div class="nbStats">
                     <p class="js_Atk">ATK</p>
-                    <img class="IconHaut" src="asset/ATK.svg" alt="ATK">
+                    <img class="IconHaut" src="asset/ATK.svg" alt="Attaque">
+                </div>
+                <div class="nbStats">
+                    <p class="js_Mana">Mana</p>
+                    <img class="IconHaut" src="asset/Mana.svg" alt="Mana">
                 </div>
             </div>
             <div class="Text_Border Bloc_Nom_Cit">
@@ -38,7 +42,11 @@ $persos = $MonManager->getAllPersonnage();
                 </div>
                 <div class="nbStats">
                     <p class="js_Atk">ATK</p>
-                    <img class="IconHaut" src="asset/ATK.svg" alt="ATK">
+                    <img class="IconHaut" src="asset/ATK.svg" alt="Attaque">
+                </div>
+                <div class="nbStats">
+                    <p class="js_Mana">Mana</p>
+                    <img class="IconHaut" src="asset/Mana.svg" alt="Mana">
                 </div>
             </div>
             <div class="Text_Border Bloc_Nom_Cit">

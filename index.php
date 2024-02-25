@@ -16,7 +16,7 @@ session_start();
 <?php
 if (isset($_GET['Admin'])){
 
-    if (isset($_GET['Add']) && isset($_POST['name']) && isset($_POST['cri']) && isset($_POST['atk']) && isset($_POST['pv']) && isset($_FILES['S1'])) {
+    if (isset($_GET['Add']) && isset($_POST['name']) && isset($_POST['cri']) && isset($_POST['atk']) && isset($_POST['pv']) && isset($_POST['mana']) && isset($_FILES['S1'])) {
 
         $nomS1 = 'S1'.$_POST['name'].'_'.str_replace(' ', '_', $_FILES['S1']['name']);
         $nomS2 = 'S2'.$_POST['name'].'_'.str_replace(' ', '_', $_FILES['S2']['name']);
@@ -27,6 +27,7 @@ if (isset($_GET['Admin'])){
             'cri' => $_POST['cri'],
             'atk' => $_POST['atk'],
             'pv' => $_POST['pv'],
+            'mana' => $_POST['mana'],
             'S1' => $nomS1,
             'S2' => $nomS2,
             'S3' => $nomS3
@@ -62,14 +63,15 @@ if (isset($_GET['Admin'])){
         } else {
             echo "Erreur lors de la suppression du personnage.";
         }
-    } else if (isset($_GET['Modify']) && isset($_POST['id']) && isset($_POST['name']) && isset($_POST['cri']) && isset($_POST['atk']) && isset($_POST['pv']) ) {
+    } else if (isset($_GET['Modify']) && isset($_POST['id']) && isset($_POST['name']) && isset($_POST['cri']) && isset($_POST['atk']) && isset($_POST['pv']) && isset($_POST['mana']) ) {
 
         $data = [
             'id' => $_POST['id'],
             'name' => $_POST['name'],
             'cri' => $_POST['cri'],
             'atk' => $_POST['atk'],
-            'pv' => $_POST['pv']
+            'pv' => $_POST['pv'],
+            'mana' => $_POST['mana'],
         ];
 
         if (isset($_FILES['S1']) && $_FILES['S1']['error'] != UPLOAD_ERR_NO_FILE) {
@@ -183,7 +185,7 @@ if (isset($_GET['Admin'])){
 
         $_SESSION['tour'] = 0;
 
-        var_dump($_SESSION);
+        // var_dump($_SESSION);
 
         header('location:index.php');
     }
