@@ -593,13 +593,15 @@ body>pre {
 .Info__Container {
     display: block;
     height: 0px;
+    width: 0px;
 }
 
 .btn_Action_Not {
     position: relative;
     display: none;
+    width: 100px;
     top: -87px;
-    left: -58px;
+    left: -30px;
     background: var(--Gris-Faible-Opa);
     border-radius: var(--Radius-ext);
     color: var(--Blanc-casse);

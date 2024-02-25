@@ -75,11 +75,11 @@ if (isset($_POST['Pers1_act'])) {
             <input type="submit" class="BTN btn_Action BtnAtk" name="Pers1_act" value="Attaquer" />
             <div class="btn_Action_Not__Container">
                 <input type="submit" class="BTN btn_Action BtnCap1" name="Pers1_act" value="Capacité 1" />
-                <span class="Info__Container"><span class="btn_Action_Not"> pas dispo</span></span>
+                <span class="Info__Container"><span class="btn_Action_Not">Indisponnible pour le moment...</span></span>
             </div>
             <div class="btn_Action_Not__Container">
                 <input type="submit" class="BTN btn_Action BtnCap2" name="Pers1_act" value="Capacité 2" />
-                <span class="Info__Container"><span class="btn_Action_Not"> pas dispo</span></span>
+                <span class="Info__Container"><span class="btn_Action_Not">Indisponnible pour le moment...</span></span>
             </div>
             <input type="submit" class="BTN btn_Action BtnSoi" name="Pers1_act" value="Soin" />
         </form>
@@ -109,11 +109,11 @@ if (isset($_POST['Pers1_act'])) {
             <input type="submit" class="BTN btn_Action BtnAtk" name="Pers2_act" value="Attaquer" />
             <div class="btn_Action_Not__Container">
                 <input type="submit" class="BTN btn_Action BtnCap1" name="Pers1_act" value="Capacité 1" />
-                <span class="Info__Container"><span class="btn_Action_Not"> pas dispo</span></span>
+                <span class="Info__Container"><span class="btn_Action_Not">Indisponnible pour le moment...</span></span>
             </div>
             <div class="btn_Action_Not__Container">
                 <input type="submit" class="BTN btn_Action BtnCap2" name="Pers1_act" value="Capacité 2" />
-                <span class="Info__Container"><span class="btn_Action_Not"> pas dispo</span></span>
+                <span class="Info__Container"><span class="btn_Action_Not">Indisponnible pour le moment...</span></span>
             </div>
             <input type="submit" class="BTN btn_Action BtnSoi" name="Pers2_act" value="Soin" />
         </form>
